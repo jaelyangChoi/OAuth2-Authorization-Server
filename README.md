@@ -1,4 +1,8 @@
 앞서 네이버와 구글이 제공하는 OAuth2 규격에 맞춰 클라이언트가 되어 보았다. <br>
+[OAuth2 client - session/SSR 구현](https://github.com/jaelyangChoi/spring-security-oauth2, "github_link")
+
+[OAuth2 client - JWT/CSR,SPA 구현](https://github.com/jaelyangChoi/spring-security-oauth2-jwt, "github_link")
+
 이번엔 우리가 **직접 OAuth2 서비스를 제공하는 <스프링 OAuth2 인가 서버> 와 <스프링 OAuth2 리소스 서버>를 구축**해보자. 
 
 <br>
