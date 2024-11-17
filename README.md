@@ -37,6 +37,6 @@
 ### 버전 및 의존성
 + Spring boot 3.5.5
 + Spring Security 6.3.4
-+ **OAuth2 Authorization Server 3.3.5**
++ **OAuth2 Authorization Server 1.3.3**
 + Spring Data JPA
 + JDBC API
