@@ -38,27 +38,27 @@ public class SecurityConfig {
     }
 
     //OAuth2 인가 서버가 동작을 수행할 시큐리티 필터 체인
-//    @Bean
-//    @Order(Ordered.HIGHEST_PRECEDENCE) //인가 서버가 동작하도록 우선순위를 가장 높게 해야한다.
-//    public SecurityFilterChain authorizationServerSecurityFilterChain(HttpSecurity http) throws Exception {
-//        //인가 서버 활성화
-//        OAuth2AuthorizationServerConfiguration.applyDefaultSecurity(http);
-//
-//        //code 발급을 위한 OIDC 설정
-//        http
-//                .getConfigurer(OAuth2AuthorizationServerConfigurer.class)
-//                .oidc(Customizer.withDefaults());
-//
-//        //로그인 창 띄워주기
-//        http
-//                .exceptionHandling(exceptions -> exceptions
-//                        .defaultAuthenticationEntryPointFor(
-//                                new LoginUrlAuthenticationEntryPoint("/login"),
-//                                new MediaTypeRequestMatcher(MediaType.TEXT_HTML)
-//                        ));
-//
-//        return http.build();
-//    }
+    @Bean
+    @Order(Ordered.HIGHEST_PRECEDENCE) //인가 서버가 동작하도록 우선순위를 가장 높게 해야한다.
+    public SecurityFilterChain authorizationServerSecurityFilterChain(HttpSecurity http) throws Exception {
+        //인가 서버 활성화
+        OAuth2AuthorizationServerConfiguration.applyDefaultSecurity(http);
+
+        //code 발급을 위한 OIDC 설정
+        http
+                .getConfigurer(OAuth2AuthorizationServerConfigurer.class)
+                .oidc(Customizer.withDefaults());
+
+        //로그인 창 띄워주기
+        http
+                .exceptionHandling(exceptions -> exceptions
+                        .defaultAuthenticationEntryPointFor(
+                                new LoginUrlAuthenticationEntryPoint("/login"),
+                                new MediaTypeRequestMatcher(MediaType.TEXT_HTML)
+                        ));
+
+        return http.build();
+    }
 
     //OAuth2 인가 서버의 기본 설정을 정의하는 Bean
     @Bean
