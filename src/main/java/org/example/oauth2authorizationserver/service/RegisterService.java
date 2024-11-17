@@ -23,7 +23,7 @@ public class RegisterService {
         entity.setId(UUID.randomUUID().toString());
         entity.setClientId(UUID.randomUUID().toString());
         entity.setClientIdIssuedAt(Instant.now());
-        entity.setClientSecret(passwordEncoder.encode(UUID.randomUUID().toString()));
+        entity.setClientSecret(passwordEncoder.encode(registerDTO.getClientSecret()));
         entity.setClientAuthenticationMethods("client_secret_basic");
         entity.setAuthorizationGrantTypes("refresh_token, authorization_code");
 
