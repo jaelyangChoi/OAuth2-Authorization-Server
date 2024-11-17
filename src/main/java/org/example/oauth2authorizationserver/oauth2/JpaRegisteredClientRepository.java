@@ -3,7 +3,6 @@ package org.example.oauth2authorizationserver.oauth2;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.Module;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.RequiredArgsConstructor;
 import org.example.oauth2authorizationserver.entity.RegisterEntity;
 import org.example.oauth2authorizationserver.repository.RegisterRepository;
 import org.springframework.security.jackson2.SecurityJackson2Modules;
